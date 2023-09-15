@@ -34,10 +34,11 @@ public class TextCheckerProviderTest {
         Mockito.verify(bracketsTextChecker).check(text);
     }
 
-    @Test 
+    @Test
     void check_unsupportedCheckerType_unsupportedOperationException() {
         final String text = "something";
 
-        assertThrows(UnsupportedOperationException.class, () -> textCheckerProvider.check(text, TextCheckerType.BRACKETS));
+        assertThrows(UnsupportedOperationException.class,
+                () -> textCheckerProvider.check(text, TextCheckerType.BRACKETS));
     }
 }

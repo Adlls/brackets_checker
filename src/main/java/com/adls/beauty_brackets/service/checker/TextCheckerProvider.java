@@ -11,18 +11,17 @@ import com.adls.beauty_brackets.service.checker.impl.TextCheckerType;
 public class TextCheckerProvider {
     private final Map<TextCheckerType, TextChecker> textCheckerByType = new HashMap<>();
 
-
     public void register(TextCheckerType checkerType, TextChecker textChecker) {
         textCheckerByType.put(checkerType, textChecker);
     }
 
     public boolean check(String text, TextCheckerType checkerType) {
-       final TextChecker textChecker = textCheckerByType.get(checkerType);
+        final TextChecker textChecker = textCheckerByType.get(checkerType);
 
-       if (textChecker == null) {
+        if (textChecker == null) {
             throw new UnsupportedOperationException(String.format("Chekcer type %s not supported", checkerType));
-       }
+        }
 
-       return textChecker.check(text);
+        return textChecker.check(text);
     }
 }

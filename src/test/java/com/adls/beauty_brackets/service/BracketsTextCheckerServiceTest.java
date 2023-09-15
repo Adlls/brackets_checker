@@ -31,5 +31,5 @@ public class BracketsTextCheckerServiceTest {
 
         Mockito.verify(checkerProvider).check(someText, TextCheckerType.BRACKETS);
     }
-    
+
 }

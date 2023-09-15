@@ -28,10 +28,10 @@ public class CheckerController {
 
     @PostMapping("text/bracket")
     @ApiResponses(value = {
-        @ApiResponse(responseCode = "200", description = "Запрос выполнен успешно"), 
-        @ApiResponse(responseCode = "404", description = "Веб-ресурс не найден"),
-        @ApiResponse(responseCode = "400", description = "Невалидный текст"),
-        @ApiResponse(responseCode = "500", description = "Внутренняя ошибка сервера"),
+            @ApiResponse(responseCode = "200", description = "Запрос выполнен успешно"),
+            @ApiResponse(responseCode = "404", description = "Веб-ресурс не найден"),
+            @ApiResponse(responseCode = "400", description = "Невалидный текст"),
+            @ApiResponse(responseCode = "500", description = "Внутренняя ошибка сервера"),
     })
     @Operation(summary = "Проверка текста на наличие корректных скобочек", description = "Вовзращает логическое значение")
     public BracketsCheckerRs checkBrackets(@RequestBody @Valid BracketsCheckerRq bracketsCheckerRq) {

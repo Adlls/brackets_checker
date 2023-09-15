@@ -14,9 +14,9 @@ public class BracketsTextCheckerService {
     private final TextCheckerProvider checkerProvider;
 
     public BracketsCheckerRs check(String text) {
-       final boolean result = checkerProvider.check(text, TextCheckerType.BRACKETS);
+        final boolean result = checkerProvider.check(text, TextCheckerType.BRACKETS);
 
-       return BracketsCheckerRs.builder().isCorrect(result).build();
+        return BracketsCheckerRs.builder().isCorrect(result).build();
     }
-    
+
 }
