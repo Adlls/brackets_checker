@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  brackets-checker:
+    image: 'brackets-checker:latest'
+    build:
+      context: ./.
+    container_name: brackets-checker
+    ports:
+      - 8080:8080
